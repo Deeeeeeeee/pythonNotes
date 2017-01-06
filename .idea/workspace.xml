@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62fad83c-8758-4b96-9dd3-e45962dabb36" name="Default" comment="" />
+    <list default="true" id="62fad83c-8758-4b96-9dd3-e45962dabb36" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/function_test.py" afterPath="$PROJECT_DIR$/function_test.py" />
+    </list>
     <ignored path="pythonNotes.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -38,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/function_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -535,7 +537,7 @@
     <entry file="file://$PROJECT_DIR$/function_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding />
         </state>
       </provider>
