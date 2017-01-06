@@ -36,5 +36,6 @@
  - git log -p dev feature
  
 > 比较刚抓取的更新和当前dev开发分支有和异同，审核后再合并到dev
+ 
  - git checkout dev
  - git merge feature
