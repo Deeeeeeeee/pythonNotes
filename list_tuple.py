@@ -22,9 +22,11 @@ print(classmates)
 classmates.insert(1, 'Jack')
 print(classmates)
 
-#要删除list末尾的元素，用pop()方法，要删除指定位置的元素，用pop(i)方法
+#要删除list末尾的元素，用pop()方法
 print('pop the last member \'%s\'' % classmates.pop())
 print(classmates)
-print('pop the NO.%d member \'%s\'' % (1+1, classmates.pop(1)))
+#要删除指定位置(索引号)的元素，用pop(i)方法，这时候是从头开始数
+i = 1
+print('pop the NO.%d member \'%s\'' % (1+i, classmates.pop(i)))
 print(classmates)
 
