@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 # 简单工厂模式：用一个单独的类来实例化对象。给我一个信号（参数），我将为你生产出相应的对象。
-# 一个计算器操作类，+ - * / 继承它，一个工厂类。工厂根据需求（信号）返回相应的对象。
+# 需求：增加一个操作，不影响其他操作，比如开方。
+# 一个计算器操作类，+ - * / 继承它，还有一个工厂类。工厂根据需求（信号）返回相应的对象。
 
 
 class Operation(object):
@@ -26,11 +27,9 @@ class OperationMul(Operation):
 
 
 class OperationDiv(Operation):
-    @property
     def get_result(self):
         try:
-            result = self.numberA / self.numberB
-            return result
+            return self.numberA / self.numberB
         except:
             print("error: divided by zero")
             return 0
