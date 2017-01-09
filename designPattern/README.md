@@ -8,14 +8,11 @@
 - 灵活性好：想怎么整就怎么整，整完还不影响功能
 
 
-## 一些概念：
-
-- 面向对象的三大特性： 封装、继承和多态
-
-
 ## 设计模式学习建议：
 
-1. 根据 python 文件上方的注释来编写代码，如 simpleFactoryPattern.py：
+##### 参考资料：《大话设计模式》 --- 程杰
+
+1. 根据 python 文件上方的注释来编写代码，最好根据步骤来，可以了解到这整一个过程。如 simpleFactoryPattern.py：
 
 		# 简单工厂模式：用一个单独的类来实例化对象。给我一个信号（参数），我将为你生产出相应的对象。
 		# 需求：增加一个操作，不影响其他操作，比如开方。
@@ -35,4 +32,5 @@
 
 ## 目录：
 
-1. [*简单工厂模式(simpleFactoryPattern)*](https://github.com/Deeeeeeeee/pythonNotes/blob/dev_seal_de/designPattern/simpleFactoryPattern.py)
+1. <font size=4>[*简单工厂模式(simpleFactoryPattern)*](https://github.com/Deeeeeeeee/pythonNotes/blob/dev_seal_de/designPattern/simpleFactoryPattern.py)</font>  
+<font size=2>相应测试：</font>[test_simpleFactoryPattern](https://github.com/Deeeeeeeee/pythonNotes/blob/dev_seal_de/designPattern/test/test_simpleFactoryPattern.py)
