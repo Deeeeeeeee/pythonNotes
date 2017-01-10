@@ -12,15 +12,3 @@
 # 第四步：http://www.imooc.com/wiki/detail/id/137 学习策略模式结构，使用策略模式改善代码。
 # 第五步：将策略模式与工厂模式结合完成需求。
 '''
-
-total_price = 0.0
-
-
-def get_total_price():
-    return total_price
-
-
-def add_goods(price, count):
-    total_p = get_total_price()
-    total_p += price * count
-    return total_p
