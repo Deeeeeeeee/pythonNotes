@@ -8,7 +8,7 @@ class MyTestCase(unittest.TestCase):
         operation = factory.create_operate('+')
         operation.numberA = 1
         operation.numberB = 2
-        result = operation.get_result
+        result = operation.get_result()
         self.assertEquals(3, result)
 
     def test_createSubOperate(self):
@@ -16,7 +16,7 @@ class MyTestCase(unittest.TestCase):
         operation = factory.create_operate('-')
         operation.numberA = 1
         operation.numberB = 2
-        result = operation.get_result
+        result = operation.get_result()
         self.assertEquals(-1, result)
 
     def test_createMulOperate(self):
@@ -24,7 +24,7 @@ class MyTestCase(unittest.TestCase):
         operation = factory.create_operate('*')
         operation.numberA = 1
         operation.numberB = 2
-        result = operation.get_result
+        result = operation.get_result()
         self.assertEquals(2, result)
 
     def test_createDivOperate(self):
@@ -32,7 +32,7 @@ class MyTestCase(unittest.TestCase):
         operation = factory.create_operate('/')
         operation.numberA = 2
         operation.numberB = 2
-        result = operation.get_result
+        result = operation.get_result()
         self.assertEquals(1, result)
 
 if __name__ == '__main__':
