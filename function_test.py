@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 
+print('---------------------------------')
+print('function test -- 函数测试')
+print('---------------------------------')
+
 # 函数返回多个值
+print('# 函数返回多个值')
 import math
 def move(x, y, step, angle = 0):
     mx = x + step * math.cos(angle)
@@ -11,6 +16,7 @@ x, y = move(100, 100, 60, math.pi/6)
 print(x, y)
 
 # 但其实这只是一种假象，Python函数返回的仍然是单一值：
+print('\n# 但其实这只是一种假象，Python函数返回的仍然是单一值：一个元组')
 r = move(100, 100, 60, math.pi / 6)
 print(r)
 '''
@@ -22,7 +28,12 @@ print(r)
 # -----------------------------------------------------------------------------------------------------------------
 
 # 函数作为生成器
+print('\n---------------------------------')
+print('函数作为生成器')
+print('---------------------------------')
+
 # 普通函数打印斐波那契数列
+print('# 普通函数打印斐波那契数列')
 def fib(num):
     n, a, b = 0, 0, 1
     while n < num:
@@ -32,6 +43,7 @@ def fib(num):
     return 'done'
 fib(10)
 
+print('\n# 函数生成器打印斐波那契数列，添加关键字yield')
 # 函数生成器打印斐波那契数列，添加关键字yield
 def _fib(num):
     n, a, b = 0, 0, 1
@@ -51,6 +63,8 @@ for x in f:
 # 但是用for循环调用generator时，发现拿不到generator的return语句的返回值。
 # 如果想要拿到返回值，必须捕获StopIteration错误，返回值包含在StopIteration的value中：
 '''
+# 如果想要拿到返回值，必须捕获StopIteration错误，返回值包含在StopIteration的value中：
+print('\n# 如果想要拿到返回值，必须捕获StopIteration错误，返回值包含在StopIteration的value中：')
 f = _fib(10)
 while True:
     try:
@@ -61,6 +75,7 @@ while True:
         break
 
 # 测试-杨辉三角，用生成器实现，打印如下输出：
+print('\n# 测试-杨辉三角，用生成器实现，打印如下输出：')
 # [1]
 # [1, 1]
 # [1, 2, 1]
@@ -88,7 +103,9 @@ for t in triangles():
     n = n + 1
     if n == 10:
         break
+
 # range测试
+print('\n# range测试')
 l = [i for i in range(1, 1)]
 print(l)
 
@@ -101,12 +118,19 @@ print(l)
 # ----------------------------------------------------------------------------------------------------------------------
 
 # 高阶函数
+print('\n---------------------------------')
+print('高阶函数')
+print('---------------------------------')
+
 # 变量可以指向函数，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数
+print('# 变量可以指向函数，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数')
+print('# |-5| + |6|:')
 def add(x, y, f):
     return f(x) + f(y)
 print(add(-5, 6, abs))
 
 # 改进-可变参数
+print('\n# 改进-可变参数')
 def ChangableParameterFunction(x = [], *f):
     print([_f(_x) for _x in x for _f in f])
 ChangableParameterFunction([1, 4, 9, 16], math.sqrt , abs)
@@ -115,7 +139,12 @@ ChangableParameterFunction([1, 4, 9, 16], math.sqrt , abs)
 # ----------------------------------------------------------------------------------------------------------------------
 
 #  map-reduce
-# 上面的可变参数实现就像map-reduce，将函数作为参数传递，将函数作用在一个iterator如List上，返回一个iterator
+print('\n---------------------------------')
+print('map-reduce')
+print('---------------------------------')
+
+# map-reduce就像上面的可变参数实现那样，将函数作为参数传递，将函数作用在一个iterator如List上，返回一个iterator
+print('# map-reduce就像上面的可变参数实现那样，将函数作为参数传递，将函数作用在一个iterator如List上，返回一个iterator\n# 输出[1,2,3,4]的平方:')
 def f(x):
     return x*x
 print(list(map(f, [1, 2, 3, 4])))
@@ -123,14 +152,17 @@ print(list(map(f, [1, 2, 3, 4])))
 # reduce把一个函数作用在一个序列[x1, x2, x3, ...]上
 # 这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算，其效果就是：
 # reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
+print('\n# reduce把一个函数作用在一个序列[x1, x2, x3, ...]上\n# 这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算，其效果就是\n# reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)')
 
 # 下面将单个数1,3,5,7,9变成13579
+print('\n# 下面将连续单个数1,3,5,7,9变成13579')
 from functools import reduce
 def f(x, y):
     return x*10 + y
 print(reduce(f, [1, 3, 5, 7, 9]))
 
 # 改进-因为str也是序列，配合map写一个转换str为int的函数：
+print('\n# 改进-因为str也是序列，配合map写一个转换str为int的函数：')
 def f(x, y):
     return x*10 +y
 def char2num(s):
@@ -139,6 +171,7 @@ def char2num(s):
 reduce(f, map(char2num, '13579'))
 
 # 再改进-整理成一个函数：
+print('\n# 再改进-整理成一个函数：')
 def str2int(s):
     def f(x, y):
         return x * 10 + y
@@ -150,20 +183,21 @@ print(str2int('13579'))
 
 # 测试-利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。
 # 输入：['adam', 'LISA', 'barT']，输出：['Adam', 'Lisa', 'Bart']：
+print('\n# 测试-利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字.\n# 输入：[\'adam\', \'LISA\', \'barT\']，输出：[\'Adam\', \'Lisa\', \'Bart\']')
 def normalize(name):
-    #for i in range(1, len(name)):
-        #name[i].lower()
     return name[0].upper() + name[1:].lower()
 print(list(map(normalize, ['adam', 'LISA', 'barT'])))
 
-# Python提供的sum()函数可以接受一个list并求和，请编写一个prod()函数，可以接受一个list并利用reduce()求积：
+# 测试-Python提供的sum()函数可以接受一个list并求和，请编写一个prod()函数，可以接受一个list并利用reduce()求积：
+print('\n# 测试-Python提供的sum()函数可以接受一个list并求和，请编写一个prod()函数，可以接受一个list并利用reduce()求积：')
 def prod(l = []):
     def mul(x, y):
         return x * y
     return reduce(mul, l)
 print('3 * 5 * 7 * 9 = ', prod([3, 5, 7, 9]))
 
-# 利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456：
+# 测试-利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456：
+print('\n# 测试-利用map和reduce编写一个str2float函数，把字符串\'123.456\'转换成浮点数123.456：')
 def str2float(s):
     def char2num(s):
         cnt = 0
@@ -180,14 +214,21 @@ print('(str)\'123.456\'--> (float)', str2float('123.456'))
 # ----------------------------------------------------------------------------------------------------------------------
 
 # filter
+print('\n---------------------------------')
+print('filter')
+print('---------------------------------')
+
 # 和map()类似，filter()也接收一个函数和一个序列。
 # 和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是丢弃该元素。
+print('# 和map()类似，filter()也接收一个函数和一个序列。\n# 和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是丢弃该元素。\n')
 
 # 利用filter在一个list里面删除偶数，保留奇数
+print('# 利用filter在一个list里面删除偶数，保留奇数')
 def remainOdd(x):
     return x%2 == 1
-print(list(filter(remainOdd, [1, 2, 3, 4, 5, 6])))
+print('[1, 2, 3, 4, 5, 6]-->', list(filter(remainOdd, [1, 2, 3, 4, 5, 6])))
 
+print('# 测试-利用filter求素数')
 # 利用filter求素数
 # 计算素数的一个方法是埃氏筛法，它的算法理解起来非常简单：
 # 首先，列出从2开始的所有自然数，构造一个序列：
@@ -206,13 +247,6 @@ def _odd_iter():
     while True:
         n = n + 2
         yield n
-# 测试_odd_iter()
-j = 1
-for i in _odd_iter():
-    print(i)
-    j += 1
-    if j == 10:
-        break
 
 # 然后定义一个筛选函数：对于每一个x，能被n整除就筛掉，不能就留下
 def _not_divisible(n):
@@ -241,22 +275,32 @@ for n in primes():
         break
 
 # 测试-回文数，回文数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()滤掉非回数：
+print('\n# 测试-回文数，回文数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()滤掉非回数：')
 output = filter(lambda x: x > 10 and str(x) == str(x)[::-1], range(1, 1000))
 print(list(output))
 
 # ----------------------------------------------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------
 
-# sorted()函数，
+print('\n---------------------------------')
+print('sorted')
+print('---------------------------------')
+
+# sorted()函数
 # sorted()函数也是一个高阶函数，它还可以接收一个key函数来实现自定义的排序，例如按绝对值大小排序：
+print('# sorted()函数\n# sorted()函数也是一个高阶函数，它还可以接收一个key函数来实现自定义的排序，例如按绝对值大小排序：')
 print(sorted([36, 5, -12, 9, -21], key=abs))
 
 # 测试-假设我们用一组tuple表示学生名字和成绩，请用sorted()对下述列表分别按名字排序：
+print('\n# 测试-假设我们用一组tuple表示学生名字和成绩，请用sorted()对下述列表分别按名字排序：')
 L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+print('L =',L)
 def by_name(n):
     return n[0]
 print(sorted(L, key=by_name))
+
 # 再按成绩从高到低排序：
+print('# 再按成绩从高到低排序：')
 def by_score(s):
     return s[1]
 print(sorted(L, key=by_score))
