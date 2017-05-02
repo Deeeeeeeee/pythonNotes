@@ -1,6 +1,7 @@
 # python 笔记
 
-> 笔记记录在 .ipynb 文件中，用IPython打开，或者jupyter。pychram2017.1版本开始也支持.ipynb文件，也可以用pychram打开
+> 笔记记录在 .ipynb 文件中，用IPython打开，或者jupyter。pychram2017.1版本开始也支持.ipynb文件，也可以用pychram打开。或者
+直接阅读.md文件
 
 ---
 
