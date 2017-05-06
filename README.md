@@ -367,16 +367,14 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
 
 - **命令模式**（按```Esc```），一般在命令模式下才能执行下面的快捷键命令
 
-> 
-- ```Enter```：进入**编辑模式**，在当前的cell继续编辑
-- ```M```：当前cell变为markdown格式
-- ```Y```：当前cell变为代码模式
+> - ```Enter```：进入**编辑模式**，在当前的cell继续编辑
+> - ```M```：当前cell变为markdown格式
+> - ```Y```：当前cell变为代码模式
 
 - **编辑模式**（按```Enter```），一般在命令模式下才能执行下面的快捷键命令
 
-> 
-- ```ctrl``` + ```s```：保存
-- ```ctrl``` + ```z```：撤销
+> - ```ctrl``` + ```s```：保存
+> - ```ctrl``` + ```z```：撤销
 
 更多命令请自行探索。
 
@@ -387,11 +385,9 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
 > **一个屌的软件背后通常都会有一堆屌的插件   ----沃·兹基硕德**
 
 要给Jupyter装插件，你需要装以下两个东西
-> 
-- [jupyter_contrib_nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
-- [jupyter_nbextensions_configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator)
->
-**这两个东西都是github上的项目，他们的安装教程在README里已经有很清晰的描述，非常简单，也是几条命令的事。建议直接参考。这里不再给出安装步骤。**
+> - [jupyter_contrib_nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions)
+> - [jupyter_nbextensions_configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator)  
+> **这两个东西都是github上的项目，他们的安装教程在README里已经有很清晰的描述，非常简单，也是几条命令的事。建议直接参考。这里不再给出安装步骤。**
 
 下面介绍一些好的插件
 
