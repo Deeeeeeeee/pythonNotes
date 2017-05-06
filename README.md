@@ -68,14 +68,15 @@
 
 * **(右键)计算机(我的电脑)** --> **属性** --> **(左边栏)高级系统设置** --> **(右下)环境变量**
 * 在**用户变量**里新建以下三个变量，及其对应值
-> - 变量名:**ANACONDA3**  变量值:**(你的安装路径)\Anaconda3** (*如:D:\DevelopTools\Anaconda3*)
-  - 变量名:**ANACONDA3_SCRIPTS** 变量值:**(你的安装路径)\Anaconda3\Scripts;(你的安装路径)\Anaconda3\Tools\Scripts** (*如:D:\DevelopTools\Anaconda3\Scripts;D:\DevelopTools\Anaconda3\Tools\Scripts*)
-  - 变量名:**ANACONDA3_TOOLS**  变量值:**(你的安装路径)\Anaconda3\Tools** (*如:D:\DevelopTools\Anaconda3\Tools*)
+> - 变量名:**```ANACONDA3```**  变量值:**```(你的安装路径)\Anaconda3```** (如```D:\DevelopTools\Anaconda3```)
+> - 变量名:**```ANACONDA3_SCRIPTS```** 变量值:**```(你的安装路径)\Anaconda3\Scripts;(你的安装路径)\Anaconda3\Tools\Scripts```** (如```D:\DevelopTools\Anaconda3\Scripts;D:\DevelopTools\Anaconda3\Tools\Scripts```)
+> - 变量名:**```ANACONDA3_TOOLS```**  变量值:**```(你的安装路径)\Anaconda3\Tools```** (如```D:\DevelopTools\Anaconda3\Tools```)
 
 * 在**path**变量名里添加以下三个变量值
+
 > - **%ANACONDA3%**
-  - **%ANACONDA3_SCRIPTS%**
-  - **%ANACONDA3_TOOLS%**
+> - **%ANACONDA3_SCRIPTS%**
+> - **%ANACONDA3_TOOLS%**
 
 ## 测试
 
@@ -90,18 +91,18 @@
 **conda**是一个开源的**包管理**系统和**环境管理**系统，它专门用来处理安装**多版本**的软件包和依赖，并且能轻松地在之间切换而互不影响。它支持**OSX**，**Linux**，和**Windows**，最初它是为python打包和发布软件专门设计的，现在它支持的语言已经有多种：**Python，R，Ruby，Lua，Scala，Java，Javascript，C/C++，FORTRAN**
 > [**官方介绍**](https://conda.io/docs/index.html)
 >
-**Package, dependency and environment management for any language: Python, R, Ruby, Lua, Scala, Java, Javascript, C/ C++, FORTRAN**
+> **Package, dependency and environment management for any language: Python, R, Ruby, Lua, Scala, Java, Javascript, C/ C++, FORTRAN**
 >
-Conda is an open source package management system and environment management system for installing multiple versions of software packages and their dependencies and switching easily between them. It works on Linux, OS X and Windows, and was created for Python programs but can package and distribute any software.
+> Conda is an open source package management system and environment management system for installing multiple versions of software packages and their dependencies and switching easily between them. It works on Linux, OS X and Windows, and was created for Python programs but can package and distribute any software.
 >
-Conda is included in Anaconda and Miniconda. Conda is also included in the Continuum subscriptions of Anaconda, which provide on-site enterprise package and environment management for Python, R, Node.js, Java, and other application stacks. Conda is also available on pypi, although that approach may not be as up-to-date.
-Miniconda is a small “bootstrap” version that includes only conda, Python, and the packages they depend on. Over 720 scientific packages and their dependencies can be installed individually from the Continuum repository with the “conda install” command.
+> Conda is included in Anaconda and Miniconda. Conda is also included in the Continuum subscriptions of Anaconda, which provide on-site enterprise package and environment management for Python, R, Node.js, Java, and other application stacks. Conda is also available on pypi, although that approach may not be as up-to-date.
+> Miniconda is a small “bootstrap” version that includes only conda, Python, and the packages they depend on. Over 720 scientific packages and their dependencies can be installed individually from the Continuum repository with the “conda install” command.
 >
-Anaconda includes conda, conda-build, Python, and over 150 automatically installed scientific packages and their dependencies. As with Miniconda, over 250 additional scientific packages can be installed individually with the “conda install” command.
+> Anaconda includes conda, conda-build, Python, and over 150 automatically installed scientific packages and their dependencies. As with Miniconda, over 250 additional scientific packages can be installed individually with the “conda install” command.
 >
-pip install conda uses the released version on pypi. This version allows you to create new conda environments using any python installation, and a new version of Python will then be installed into those environments. These environments are still considered “Anaconda installations.”
+> pip install conda uses the released version on pypi. This version allows you to create new conda environments using any python installation, and a new version of Python will then be installed into those environments. These environments are still considered “Anaconda installations.”
 >
-The conda command is the primary interface for managing Anaconda installations. It can query and search the Anaconda package index and current Anaconda installation, create new conda environments, and install and update packages into existing conda environments.
+> The conda command is the primary interface for managing Anaconda installations. It can query and search the Anaconda package index and current Anaconda installation, create new conda environments, and install and update packages into existing conda environments.
 
 ## 配置源(非常重要！！！)
 
@@ -172,74 +173,74 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/mro/
 - **conda**的配置信息一般都写在 **.condarc** 文件里，输入 ```conda config --help``` 查看命令参数与用法
 > 例：
 >
-输入：```conda config --show```
+> 输入：```conda config --show```
 >
-返回：
-```
-add_anaconda_token: True
-add_pip_as_python_dependency: True
-allow_non_channel_urls: True
-allow_softlinks: True
-always_copy: False
-always_softlink: False
-always_yes: False
-anaconda_upload: None
-auto_update_conda: True
-changeps1: True
-channel_alias: https://conda.anaconda.org
-channel_priority: True
-channels:
-  - https://pypi.tuna.tsinghua.edu.cn/simple/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/mro/
-client_ssl_cert:
-client_ssl_cert_key:
-clobber: False
-create_default_packages: []
-custom_channels:
-  pkgs/free: https://repo.continuum.io/
-  pkgs/r: https://repo.continuum.io/
-  pkgs/pro: https://repo.continuum.io/
-  pkgs/msys2: https://repo.continuum.io/
-custom_multichannels:
-  defaults: ["https://repo.continuum.io/pkgs/free", "https://repo.continuum.io/pkgs/r", "https://repo.continuum.io/pkgs/pro", "https://repo.continuum.io/pkgs/msys2"]
-  local: []
-default_channels:
-  - https://repo.continuum.io/pkgs/free
-  - https://repo.continuum.io/pkgs/r
-  - https://repo.continuum.io/pkgs/pro
-  - https://repo.continuum.io/pkgs/msys2
-disallow: []
-envs_dirs:
-  - D:\DevelopTools\Anaconda3\envs
-  - C:\Users\yang\AppData\Local\conda\conda\envs
-  - C:\Users\yang\.conda\envs
-force: False
-json: False
-local_repodata_ttl: 1
-migrated_channel_aliases: []
-offline: False
-path_conflict: clobber
-pinned_packages: []
-pkgs_dirs:
-  - D:\DevelopTools\Anaconda3\pkgs
-  - C:\Users\yang\AppData\Local\conda\conda\pkgs
-proxy_servers: {}
-quiet: False
-remote_connect_timeout_secs: 9.15
-remote_max_retries: 3
-remote_read_timeout_secs: 60.0
-rollback_enabled: True
-shortcuts: True
-show_channel_urls: True
-ssl_verify: True
-track_features: []
-use_pip: True
-verbosity: 0
-```
+> 返回：
+> ```
+> add_anaconda_token: True
+> add_pip_as_python_dependency: True
+> allow_non_channel_urls: True
+> allow_softlinks: True
+> always_copy: False
+> always_softlink: False
+> always_yes: False
+> anaconda_upload: None
+> auto_update_conda: True
+> changeps1: True
+> channel_alias: https://conda.anaconda.org
+> channel_priority: True
+>  channels:
+>    - https://pypi.tuna.tsinghua.edu.cn/simple/
+>    - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+>    - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/
+>    - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+>    - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+>    - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/mro/
+>  client_ssl_cert:
+>  client_ssl_cert_key:
+>  clobber: False
+>  create_default_packages: []
+>  custom_channels:
+>    pkgs/free: https://repo.continuum.io/
+>    pkgs/r: https://repo.continuum.io/
+>    pkgs/pro: https://repo.continuum.io/
+>    pkgs/msys2: https://repo.continuum.io/
+>  custom_multichannels:
+>    defaults: ["https://repo.continuum.io/pkgs/free", "https://repo.continuum.io/pkgs/r", "https://repo.continuum.io/pkgs/pro", "https://repo.continuum.io/pkgs/msys2"]
+>    local: []
+>  default_channels:
+>    - https://repo.continuum.io/pkgs/free
+>    - https://repo.continuum.io/pkgs/r
+>    - https://repo.continuum.io/pkgs/pro
+>    - https://repo.continuum.io/pkgs/msys2
+>  disallow: []
+>  envs_dirs:
+>    - D:\DevelopTools\Anaconda3\envs
+>    - C:\Users\yang\AppData\Local\conda\conda\envs
+>    - C:\Users\yang\.conda\envs
+>  force: False
+>  json: False
+>  local_repodata_ttl: 1
+>  migrated_channel_aliases: []
+>  offline: False
+>  path_conflict: clobber
+>  pinned_packages: []
+>  pkgs_dirs:
+>    - D:\DevelopTools\Anaconda3\pkgs
+>    - C:\Users\yang\AppData\Local\conda\conda\pkgs
+>  proxy_servers: {}
+>  quiet: False
+>  remote_connect_timeout_secs: 9.15
+>  remote_max_retries: 3
+>  remote_read_timeout_secs: 60.0
+>  rollback_enabled: True
+>  shortcuts: True
+>  show_channel_urls: True
+>  ssl_verify: True
+>  track_features: []
+>  use_pip: True
+>  verbosity: 0
+>  ```
 
 ### conda自身管理
 
@@ -249,11 +250,11 @@ verbosity: 0
 ### python环境&多版本python管理
 python的版本问题一直以来饱受（我的）诟病，特别是 **python2** 和 **python3** 的语法可是有很大区别，以致于一些库的使用都造成了很大麻烦。但是，你又不希望自己的系统同时装两个，甚至好几个版本的python，光是想怎样切换都是一件头疼的问题。在没有conda之前，我有尝试过 **[virtualenv](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432712108300322c61f256c74803b43bfd65c6f8d0d0000)** 和 **[pyenv](http://seisman.info/python-pyenv.html)** 这两种python多版本环境管理工具，但是总感觉不太友好。直到我TM遇到了conda...
 
-因为Anaconda是一个面向于**科学计算**的python集成环境，所以它包含的库大多都是做科学计算的。但是像**Web**开发方面的库和框架（如**[Django](https://www.djangoproject.com/)**）Anaconda就没有集成在里面。假如我现在要**用python做Web开发**，而且我**只安装了Anaconda**，我又**不想直接把Django装到Anaconda里面，我想把它跟其他包隔离开来，Anaconda专门处理数据分析的问题**。这时**conda的环境管理**就派上用场了。
+因为Anaconda是一个面向于**科学计算**的python集成环境，所以它包含的库大多都是做科学计算的。但是像**Web**开发方面的库和框架（**如[Django](https://www.djangoproject.com/)**）Anaconda就没有集成在里面。假如我现在要**用python做Web开发**，而且我**只安装了Anaconda**，我又**不想直接把Django装到Anaconda里面，我想把它跟其他包隔离开来，Anaconda专门处理数据分析的问题**。这时**conda的环境管理**就派上用场了。
 > - **输入```conda env --help```查看有关conda环境管理的命令与帮助**
 
 #### 创建环境(conda create)
-conda的环境创建一般在**Anaconda\env\\**目录下，假如需要更改路径，输入```conda create --help```查看有关说明
+conda的环境创建一般在```Anaconda\env\```目录下，假如需要更改路径，输入```conda create --help```查看有关说明
 
 - 假如你的Anaconda版本为python3，现在你想创建一个新的环境，基于python2版本，不含任何第三方库，只是完整干净的python2环境。你只需在终端输入：
 
