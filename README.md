@@ -250,7 +250,7 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/mro/
 ### python环境&多版本python管理
 python的版本问题一直以来饱受（我的）诟病，特别是 **python2** 和 **python3** 的语法可是有很大区别，以致于一些库的使用都造成了很大麻烦。但是，你又不希望自己的系统同时装两个，甚至好几个版本的python，光是想怎样切换都是一件头疼的问题。在没有conda之前，我有尝试过 **[virtualenv](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432712108300322c61f256c74803b43bfd65c6f8d0d0000)** 和 **[pyenv](http://seisman.info/python-pyenv.html)** 这两种python多版本环境管理工具，但是总感觉不太友好。直到我TM遇到了conda...
 
-因为Anaconda是一个面向于**科学计算**的python集成环境，所以它包含的库大多都是做科学计算的。但是像**Web**开发方面的库和框架（如**[Django](https://www.djangoproject.com/)**）Anaconda就没有集成在里面。假如我现在要**用python做Web开发**，而且我**只安装了Anaconda**，我又**不想直接把Django装到Anaconda里面，我想把它跟其他包隔离开来，Anaconda专门处理数据分析的问题**。这时**conda的环境管理**就派上用场了。
+因为Anaconda是一个面向于**科学计算**的python集成环境，所以它包含的库大多都是做科学计算的。但是像**Web**开发方面的库和框架（如[**Django**](https://www.djangoproject.com/)**）Anaconda就没有集成在里面。假如我现在要**用python做Web开发**，而且我**只安装了Anaconda**，我又**不想直接把Django装到Anaconda里面，我想把它跟其他包隔离开来，Anaconda专门处理数据分析的问题**。这时**conda的环境管理**就派上用场了。
 > - **输入```conda env --help```查看有关conda环境管理的命令与帮助**
 
 #### 创建环境(conda create)
