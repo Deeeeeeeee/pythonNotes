@@ -254,7 +254,7 @@ python的版本问题一直以来饱受（我的）诟病，特别是 **python2*
 > - **输入```conda env --help```查看有关conda环境管理的命令与帮助**
 
 #### 创建环境(conda create)
-conda的环境创建一般在**```Anaconda\env\```**目录下，假如需要更改路径，输入```conda create --help```查看有关说明
+conda的环境创建一般在```Anaconda\env\```目录下，假如需要更改路径，输入```conda create --help```查看有关说明
 
 - 假如你的Anaconda版本为python3，现在你想创建一个新的环境，基于python2版本，不含任何第三方库，只是完整干净的python2环境。你只需在终端输入：
 
