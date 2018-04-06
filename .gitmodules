@@ -1,6 +1,3 @@
-[submodule "Project"]
-	path = Project
-	url = https://github.com/tankeryang/banciyuan-downloader
 [submodule "Project/banciyuan-downloader"]
 	path = Project/banciyuan-downloader
 	url = git@github.com:tankeryang/banciyuan-downloader.git
